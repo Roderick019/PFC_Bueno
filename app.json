@@ -1,0 +1,7 @@
+{
+  "name": "pfc",
+  "displayName": "pfc",
+  "plugins": [
+    "expo-font"
+  ]
+}

@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Image } from 'react-native';
 
 // Importar las pantallas
 import Login from './screens/Login';
@@ -37,9 +38,34 @@ const App = () => {
 function MyTabs() {
   return (
     <Tab.Navigator initialRouteName='Login'>
-      <Tab.Screen name="HomeScreen" component={HomeScreen} />
-      <Tab.Screen name="Pantalla2" component={Pantalla2} />
-      <Stack.Screen name='Pantalla3' component={Pantalla3} />
+      <Tab.Screen name="Inicio" component={HomeScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Image
+              source={require('./screens/images/home-64.png')} // Ruta de la imagen en tu proyecto
+              style={{ width: size, height: size }}
+            />
+          )
+        }}
+      />
+      <Tab.Screen name="Reseñas" component={Pantalla2}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Image
+              source={require('./screens/images/reseñas.png')} // Ruta de la imagen en tu proyecto
+              style={{ width: 30, height: 35 }}
+            />
+          )
+        }} />
+      <Stack.Screen name='Tienda' component={Pantalla3}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Image
+              source={require('./screens/images/store.png')} // Ruta de la imagen en tu proyecto
+              style={{ width: 30, height: 30 }}
+            />
+          )
+        }} />
 
     </Tab.Navigator>
   )

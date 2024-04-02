@@ -24,6 +24,7 @@ const App = () => {
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='HomeScreen' component={HomeScreen} />
         <Stack.Screen name='Pantalla3' component={Pantalla3} />
+        <Stack.Screen name='RegistroScreen' component={RegistroScreen} />
         <Stack.Screen name="Home" component={MyTabs} options={{ headerShown: false }} />
 
 
